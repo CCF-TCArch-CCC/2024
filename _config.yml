@@ -14,11 +14,11 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 title: "CCFSys CCC"
-class_name: CCFSys Customized Computing Challenge 2023
+class_name: CCFSys Customized Computing Challenge 2024
 class_number: CCFSys CCC
 email: CCC_CCF@outlook.com
-baseurl: "/2023"
-url: "ccfsys-ccc.github.io"
+baseurl: "/2024"
+url: "ccf-tcarch-ccc.github.io"
 
 permalink: pretty
 
