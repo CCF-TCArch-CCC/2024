@@ -1,0 +1,40 @@
+<div class="border-right sidebar-color" id="sidebar-wrapper">
+    <div class="sidebar-sticky">
+        <div class="sidebar-heading-big">
+            <a href="{% link index.md %}">
+                {{ site.class_number }}</a>
+
+        </div>
+
+        <div class="search-bar">
+            <form method="get" action="https://www.google.com/search" target="_blank">
+                <input class="search-box" type="hidden" name="sitesearch" value="{{ site.url }}{{ site.baseurl }}" />
+                <input class="search-box" type="text" name="q" maxlength="255" placeholder="Search" />
+            </form>
+        </div>
+
+        <div class="list-group list-group-flush sidebar-color">
+
+            {% assign pages_sorted = site.pages | sort : "order" %}
+
+            {% for item in pages_sorted %}
+            {% if item.sidebar %}
+            <a href="{% link {{ item.path }} %}"
+                class="sidebar-color list-item-tall list-group-item list-group-item-action sidebar-item ">
+                {% if item.icon %}
+                <i class="{{ item.icon }}"></i>
+                {% endif %}
+                {{ item.short_title | default: item.title }}
+            </a>
+            {% endif %}
+            {% endfor %}
+
+            <!-- <a href="https://slack.com/app_redirect?team=T01J887F8MU&channel=C01JF1N6TH8"
+                class="list-item-normal list-group-item list-group-item-action sidebar-item" target="_blank"><i
+                    class="fa fa-question-circle"></i>
+                Slack</a> -->
+
+        </div>
+
+    </div>
+</div>

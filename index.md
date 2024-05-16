@@ -1,63 +1,50 @@
 ---
-layout: default
+layout: page
+toc: false
+title: 
 ---
 
+#  {{ site.class_name}}
 
-# CCC 定制计算算法实现挑战赛
+CCFSys定制计算挑战赛由中国计算机联合会主办，旨在发掘计算机体系结构方面的人才，激发学生对计算机体系结构研究的兴趣，培养学生的创新精神。今年比赛的目标是探索AI引擎在数字信号处理和视觉领域的处理能力。比赛的硬件平台将使用搭载了高性能加速核心AI引擎阵列的AMD VCK5000板卡。
 
-![](./images/cover2022.jpg)
+本次大赛能够带领参赛者深入体验真正的异构平台，该平台结合了AI引擎，可编程逻辑，DSP引擎，片上网络，以最大限度的提高编程的灵活性和硬件的可重构性。
 
-**CCF TCARCH-** 计算机体系结构挑战赛是中国计算机学会体系结构专委会所举办的旨在挖掘计算机体系结构人才、激发学生对计算机体系结构的研究兴趣、培养学生创新精神的一项全国赛事。
+<p align="middle">
+    <img src="{% link media/AIE_CPU.png %}" width="600" class="center">
+</p>
 
-Customized Computing Challenge (**CCC** 定制计算算法实现挑战赛)由CCF 体系结构专委主办，北京大学CECA和AMD-Xilinx学术合作部联合承办，北大信息技术高等研究院协办。
-是首次发起的基于HLS的算法到硬件实现编程挑战赛，不仅考察编程能力还考察算法硬件实现能力。比赛采用与ACM编程和学生超算比赛类似赛制，题目分基础题和高级题，闯关制积分，循序渐进，每队不超过2人，展示个人同时鼓励合作。
+## 赛事安排
 
-CCC2022决赛将于2022年7月底8月初举办
+CCC 2023的赛制以团队进行，每队最多3人，可跨单位组队，赛题分为两个方向：DSP方向和CV方向。参赛队伍需要在两题中选择一个题目完成，最终选出排名前3的队伍进入现场决赛完成实际硬件性能的评测。所有参赛设计均须提供设计报告，鼓励参赛者从算法本身和AI引擎架构的角度提出进一步探索异构平台架构和开发流程优化的方法。
 
-<!-- 与CCF TCARCH Advanced Parallel Processing Technology   -->
-<!-- ([**APPT2021**](https://appt2021.github.io/)) 以及首届 CCF计算机系统大会 ([**CCFSYS2021**](http://ccfsys2021.zhejianglab.com/index.html)) -->
+本次比赛的决赛将与2023年中国计算机学会系统大会（CCFSys 2023）同步举行，并在现场决出前三名，第一名将获得10000元人民币奖金，第二名将获得5000元人民币奖金，第三名将获得
+3000元人民币奖金。
 
-**注：2022年4月18日开放报名和发布**
+本次比赛自4月26日开发报名，5月12日报名截止，5月22日开始开放设计作品在线提交, 并于6月30日提交截止，入围决赛的队伍将在7月10日公示。
 
-<a href="http://118.31.189.183:8008/"><font size="6" ><strong>点击报名</strong></font></a>
+<p align="middle">
+    <img src="{% link media/CCC_2023_flow.png %}" width="800" class="center">
+</p>
 
+## 开发环境
 
-## CCC定制计算挑战赛
+本次竞赛将开发使用AMD异构加速计算集群(HACC)平台，配备了包含VCK5000板卡的最新的自适应计算硬件和软件技术，旨在支持高性能计算(HPC)自适应计算加速的研究。
+关于HACC的详细内容，请参考[链接](https://www.amd-haccs.io/index.html)
 
-欢迎关注CCC定制挑战赛公众号，获取更多信息
+## 竞赛委员会
 
+- 北京大学 梁云
 
+- 中国科技大学 王超
 
-![](./images/qr1.jpg)
+- 华中科技大学 何强
 
+## 链接
 
-## 竞赛组织
-
-中国计算机学会体系结构专委会，上海交通大学IPADS 实验室
-
-
-## 竞赛流程
-
-![](./images/timeline2022.jpg)
-
-## 优秀奖项
-
-第一名 10,000元
-
-第二名 5,000元
-
-第三名 3,000元
-
-证书：成绩前10% 一等奖证书，11- 25%, 二等奖证书，26%-40% 三等奖证书
-
-优秀作品将有机会入选CCFChip大会论文集
-
-
-
-
-## 成绩排名
-
-2022年05月05日（暂定）开放设计提交后，此处显示参赛者的实时成绩排名
-
----------------------------------------
-<p align="center">Copyright&copy; 2024 AMD-Xilinx</p>
+  * [Contest Dates]({% link _pages/schedule.md %})
+  * [Registration](https://www.wjx.top/vm/tbXtzkR.aspx#)
+  * [Participant Info]({% link _pages/info.md %})
+  * [Problems]({% link _pages/problems.md %})
+  * [Submission Instructions]({% link _pages/submission.md %})
+  * [Contest Results]({% link _pages/results.md %})
