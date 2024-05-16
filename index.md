@@ -47,4 +47,3 @@ CCC 2023的赛制以团队进行，每队最多3人，可跨单位组队，赛�
   * [Participant Info]({% link _pages/info.md %})
   * [Problems]({% link _pages/problems.md %})
   * [Submission Instructions]({% link _pages/submission.md %})
-  * [Contest Results]({% link _pages/results.md %})
