@@ -7,13 +7,14 @@ sidebar: true
 icon: fa fa-calendar
 order: 1
 ---
-- Contest announcement: April 26, 2023
-- Registration Deadline: May 12, 2023
-- Preliminary submissions:
-    - Submission open: May 22, 2023
-    - Submission deadline: June 30, 2023
-- **Final submission**: June 30, 2023
-- Finalist teams announced: July 10, 2023
-- Final presentation: CCFSys 2023, August 4, Nanchang, CN
+5月10日 发布
 
+5月16-30日 培训
 
+6月 15日 第一次提交
+
+6月28日 第二次提交
+
+7月3日 公布决赛名单 
+
+7月19日 CCFChip现场决赛答辩与颁奖
