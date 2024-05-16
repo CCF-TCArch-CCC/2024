@@ -52,4 +52,7 @@ $$Total = Runtime + PPL$$
 
 ## 竞赛组织
 
-中国计算机学会体系结构专委会，上海交通大学 IPADS 实验室
+主办单位： CCF计算机体系结构专委会
+
+承办单位： 上海交通大学 IPADS 实验室, CCF chip conference
+
