@@ -6,99 +6,22 @@ sidebar: true
 icon: fas fa-sort-numeric-down
 order: 4
 ---
-## FFT
+# 竞赛题目
 
-### Problem
+## 赛题介绍
 
-- Basic  - 1024-Point FFT Single Kernel Programming
+近年来，随着大型语言模型（LLM）的兴起，其在自然语言处理任务中的应用已成为人工智能领域的热点。同时MLC LLM, llama.cpp等项目的出现，旨在提高LLM在消费级显卡甚至个人计算机上的推理速度，降低了大模型部署对硬件资源的需求，使更多人从大模型中获益。例如在CMU 陈天奇团队MLC项目的测试（使用4 bit量化对Llama 2 7B和13B，设置prompt长度为1个token，生成512个 token来测量decoding的性能，batch size=1）：
 
-    The basic requirement is to complete a 1k-Point FFT design based on  personal understanding using AIE API or AIE Intrinsic. 
+![p1](images/p1.png)
 
-    - AIE Emulation succeeded
-    - The design report submitted
+可以看到在MLC LLM项目中， 不管是NV RTX 还是AMD Radeon 消费级显卡都取得了很不错的推理速度。而llama.cpp是一个相对早期的LLM推理引擎开源项目，其架构设计可以通过CPU/GPU进行混合加速推理任务，甚至可以仅依靠CPU完成推理。然而，随着LLM规模的增大和任务的复杂性，llama.cpp在处理大规模模型时面临内存需求和计算效率方面的挑战。
 
-- Advanced  - Explore very large point FFT (8k ~ 64k points) design on VCK5000 
+上海交大IPADS 实验室在2023年12月发布了PowerInfer开源项目，其在llama.cpp基础上采用了一种全新的设计思路，利用LLM推理中的高局部性特征。该局部性具体表现为神经元激活的幂律分布，即少数“热”神经元在不同输入下保持激活，而大多数“冷”神经元根据具体输入变化。PowerInfer充分利用了这一特点，设计了一种GPU-CPU混合推理引擎，通过将热激活的神经元预加载到GPU中，而将冷激活的神经元计算在CPU上，从而显著降低了GPU内存需求和CPU-GPU数据传输。目前该项目也已经在llama2-7B，llama2-13B模型上实现了NV和AMD GPU的支持。 
 
-    - The system level emulation or the hardware run on VCK5000 succeeded
-    - The design report submitted
+![p2](images/p2.png)
 
-### Scoring Rules 
+## **初赛题目**
+本次比赛，主要基于PowerInfer的开源项目，要求参赛队在熟悉Llama2-7B/13B的优化方法基础上，利用开源的ROCm开源堆栈和HIP编程模型在Radeon 7900XTX GPU上对13B模型：**[Prosparse-13B](https://huggingface.co/PowerInfer/prosparse-llama-2-13b-gguf)** 展开优化，方法不限(例如算子优化、混合精度量化等)。
 
-- Using Performance Matrix to measure 
-
-The following table shows an example:
-
-| Point Size  | Number of AIE   | GSPS | Data Type | Twiddle Type |Power| GSPW 
-|-------|--------|-------|---|---|---|---|
-| 4K | 5 | 2 |cint16 |cint16|1100| 1.8|
-
-- Using the same number of AIEs and the same input data type
-
-The higher the sampling rate (GSPS), the shorter the calculation period, and the higher the throughput rate, the higher the score.
-
-- Use different numbers of AIEs or different input data types
-
-The larger the points of FFT, the better the scalability, and the more reasonable the utilization of AIE and PL resources, the higher the score.
-
-### Supported FFT Development Flow 
-
-The Vitis tool chain currently supports three types of development from bottom to top:
-
-- [AIE Intrinsic](https://www.xilinx.com/htmldocs/xilinx2022_2/aiengine_intrinsics/intrinsics/index.html)
-    - AI Engine supports the lowest level of development by intrinsic functions.
-    - By restructuring the scalar application code with these intrinsic functions and vector data types as needed, you can implement the vectorized application code.
-
-- [AIE API](https://www.xilinx.com/htmldocs/xilinx2022_2/aiengine_api/aie_api/doc/index.html)
-    - The AIE API offers the aie::fft_dit class template that provides the building blocks to implement all the stages of the FFT decimation-in-time computation. 
-
-- [Vitis DSP AIE Library](https://xilinx.github.io/Vitis_Libraries/dsp/2021.1/user_guide/L2/1-introduction.html#)
-    - The DSP Lib contains FFT/iFFT solution. This is a single channel, decimation in time (DIT) implementation. 
-    - It has configurable point size, data type, forward/reverse direction, scaling (as a shift), cascade length, static/dynamic point size, window size, interface api (stream/window) and parallelism factor. 
-
-### Reference Design
-
-- The Stockham Algorithm is used to implement FFT on the AIE.
-
-- Different reference design with different level of start point using AIE API, AIE Intrinsic and Vitis DSP Library will be provided during training.
-
-- The reference design developed by AIE intrinsic is for reference only. Entrants must make changes or innovations based on the reference design.
-
-- The reference design online documentation can be found [here]( https://docs.xilinx.com/r/en-US/xapp1356-fft-ai-engine). 
-
-
-## Filter2D
-
-### Problem
-
--  Basic  -  Vision 3X3 filter2D on 64x64 image
-
-    Create the filter2D function with 3x3 kernel on 64x64 image using AIE API or AIE Intrinsic based on personal understanding
-
-    - AIE Emulation succeeded
-    - The design report submitted
-
--  Advanced - Image Signal Processing Pipeline on HD image
-
-    Create high definition image processing pipeline design based on personal understanding. It is encouraged to fully use the Vitis Vision Library.
-
-    - The system level emulation or the hardware run on VCK5000 succeeded
-    - The design report submitted
-
-### Scoring Rules
-
-- Basic requirement
-
-    With the same number of AIEs and the same input data type, teams with fewer storage resources and shorter computing cycles score higher.
-
-- Advanced requirement
-
-    The larger the design input image size (HD~4K), the higher the frame rate (FPS), the higher the score.
-
-    The higher the innovation degree of the design, the more reasonable the application design of the basic image processing pipeline of the system, the higher the score.
-
-### Reference Design
-
-The reference design is from the Vitis Vision L2 AIE Library. The filter2D source code developed by AIE intrinsic can be found on the [Vitis Vision Library Github](https://github.com/Xilinx/Vitis_Libraries/blob/main/vision/L1/include/aie/imgproc/xf_filter2d_aie.hpp).
-
-
+![p3](images/p3.png)
 

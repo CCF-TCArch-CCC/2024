@@ -18,64 +18,38 @@ order: 2
 
 ## Rules
 
-* Complete one of the two questions in the competition, and the top 5 with the highest total score will enter the final
+本赛题的评分主要包含两个部分，为推理速度和推理模型精度。其中推理速度评分占比70%，模型精度占比30%。
 
-* If both works are completed, the works with higher degree of completion shall be selected for total score
+4.1推理速度：推理速度分为prompt处理速度和token生成速度。Prompt处理速度：是指模型接收输入的prompt（提示）并处理所有输入token，直到生成第一个输出token所需的时间，即Prefill速度。Token生成速度：是指模型在生成第一个输出token之后，继续生成后续token的速度，即Decode速度。本赛题采用生成128个token的平均速度作为decode速度。
 
-* Finalist entries should be open sourced at CCF-CCC@Github
+本赛题采用指标tokens/s，在给定prompt中，推理速度越快越好。本赛题分别以参赛者最快运行时间 $Decode_{best}$ 、$Prefill_{best}$为基准，推理生成速度评判分数计算如下：
 
-## Scoring Criteria
+$$Runtime = 70\% * ({Decode \over 2*Decode_{best}} + {Prefill \over 2*Prefill_{best}})$$
 
-* Performance score 40% (see [Problems]({% link _pages/problems.md %}))
+4.2模型精度的评估指标如下：
 
-* Design Report 40%
+本赛题使用困惑度(PPL)作为模型精度的评估指标，以模型在给定语料困惑度$P_{best}$ 为基准，模型精度评估分数计算如下：
 
-  * System architecture reasonable degree 20%
+$$PPL = 30\% * ({P - P_{best} \over P_{best}})$$
 
-      - Use computing resources such as AIE and PL properly
+综合两者评分即为总分:
 
-      - The design of hardware architecture reasonable degree and performance optimization
+$$Total = Runtime + PPL$$
 
-  * Architecture Analysis and Innovation 20%
+**若发现试图通过多次提交等手段来获取testbench信息的行为，组委会有权取消该题成绩**
 
-      - Present the strengths and weaknesses of the new architecture and suggest improvement ideas
+## 奖项
 
-      - Propose suitable application scenarios for this architecture
+第一名 10,000元
 
-      - Explore the performance limits of the design
+第二名 5,000元
 
-* Field defense 20%
+第三名 3,000元
 
-## Target Platform
+证书：成绩前10% 一等奖证书，11- 25%, 二等奖证书，26%-40% 三等奖证书
 
-The 2023 contest will use the [VCK5000 Versal ACAP PLATFORM](https://www.xilinx.com/products/boards-and-kits/vck5000.html).
+优秀作品将有机会入选CCFChip大会论文集
 
-<p align="middle">
-    <img src="{% link media/vck5000.png %}" width="300" class="center">
-</p>
+## 竞赛组织
 
-## Other Info
-
-### AI Engine Introduction
-
-AI Engines are an array of very-long instruction word (VLIW) processors with single instruction multiple data (SIMD) vector units that are highly optimized for compute-intensive applications.
-
-- An AI Engine kernel is a C/C++ program which is written using **native C/C++ language, AI Engine API and specialized intrinsic functions** that target the VLIW scalar and vector processors. 
-
-- The AI Engine kernel code is compiled using the **AI Engine compiler (aiecompiler) that is included in the Vitis™ core development kit**. The AI Engine compiler compiles the kernels to produce ELF files that are run on the AI Engine processors.
-
-- AI Engine supports **specialized data types and API functions for vector programming**. By restructuring the scalar application code with these API functions and vector data types as needed, you can implement the vectorized application code. 
-
-- The AI Engine compiler takes care of mapping API functions to **operations, vector or scalar register allocation and data movement, automatic scheduling, and generation of microcode** that is efficiently packed in VLIW instructions.
-
-The AMD official tutorial is provided [here](https://github.com/Xilinx/xup_aie_training): https://github.com/Xilinx/xup_aie_training. 
-
-### Frequently Asked Questions
-  * [FAQs]({% link _pages/faq.md %})
-
-### Previous Contest Winning Designs
-
-  * 2022: https://github.com/xupsh/ccc
-  * 2021: https://github.com/xupsh/ccc2021
-
-
+中国计算机学会体系结构专委会，上海交通大学 IPADS 实验室
