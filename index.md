@@ -12,7 +12,7 @@ CCF TCARCH- 计算机体系结构挑战赛是中国计算机学会体系结构�
 ## 赛事安排
 
 <p align="middle">
-    <img src="{% link media/timeline.png %}" width="500" class="center">
+    <img src="{% link media/Timeline.png %}" width="600" class="center">
 </p>
 
 ## 链接
