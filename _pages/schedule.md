@@ -7,7 +7,7 @@ sidebar: true
 icon: fa fa-calendar
 order: 1
 ---
-5月17日 竞赛发布
+5月20日 竞赛发布
 
 5月27-31日 培训
 
