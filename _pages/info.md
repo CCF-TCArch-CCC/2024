@@ -27,13 +27,15 @@ https://www.wjx.top/vm/mBrTh1g.aspx
 
 本赛题的评分主要包含两个部分，为推理速度和推理模型精度。其中推理速度评分占比70%，模型精度占比30%。
 
-4.1推理速度：推理速度分为prompt处理速度和token生成速度。Prompt处理速度：是指模型接收输入的prompt（提示）并处理所有输入token，直到生成第一个输出token所需的时间，即Prefill速度。Token生成速度：是指模型在生成第一个输出token之后，继续生成后续token的速度，即Decode速度。本赛题采用生成128个token的平均速度作为decode速度。
+**推理速度：**
+
+推理速度分为prompt处理速度和token生成速度。Prompt处理速度：是指模型接收输入的prompt（提示）并处理所有输入token，直到生成第一个输出token所需的时间，即Prefill速度。Token生成速度：是指模型在生成第一个输出token之后，继续生成后续token的速度，即Decode速度。本赛题采用生成128个token的平均速度作为decode速度。
 
 本赛题采用指标tokens/s，在给定prompt中，推理速度越快越好。本赛题分别以参赛者最快运行时间 $Decode_{best}$ 、$Prefill_{best}$为基准，推理生成速度评判分数计算如下：
 
 $$Runtime = 70\% * ({Decode \over 2*Decode_{best}} + {Prefill \over 2*Prefill_{best}})$$
 
-4.2模型精度的评估指标如下：
+**模型精度的评估指标：**
 
 本赛题使用困惑度(PPL)作为模型精度的评估指标，以模型在给定语料困惑度$P_{best}$ 为基准，模型精度评估分数计算如下：
 
