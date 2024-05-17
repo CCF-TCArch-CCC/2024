@@ -13,8 +13,9 @@ order: 2
 * [Registration](https://www.wjx.top/vm/tbXtzkR.aspx# ) 
 
 <p align="middle">
-    <img src="{% link media/qrcode.jpg %}" width="300" class="center">
+    <img src="{% link media/CCC2024_qrcode.jpg %}" width="300" class="center">
 </p>
+
 
 ## Rules
 
@@ -46,7 +47,7 @@ $$Total = Runtime + PPL$$
 
 第三名 3,000元
 
-证书：成绩前10% 一等奖证书，11- 25%, 二等奖证书，26%-40% 三等奖证书
+证书：成绩前 10% 一等奖证书，11 - 25% 二等奖证书，26 - 40% 三等奖证书
 
 优秀作品将有机会入选CCFChip大会论文集
 
