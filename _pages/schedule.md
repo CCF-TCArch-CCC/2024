@@ -20,5 +20,5 @@ order: 1
 7月19日 CCFChip现场决赛答辩与颁奖
 
 <p align="middle">
-    <img src="{% link media/Timeline.png %}" width="600" class="center">
+    <img src="{% link media/schedule.png %}" width="600" class="center">
 </p>
