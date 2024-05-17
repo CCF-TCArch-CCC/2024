@@ -9,4 +9,8 @@ order: 5
 ---
 
 # Submission
-提交个人Github private repo到邮箱PowerInfer@outlook.com
+请队伍将作品设置为Github Private Repo
+
+并使能权限给PowerInfer Github: PowerInfer@outlook.com
+
+比赛设置两次提交机会，取成绩最佳的一次

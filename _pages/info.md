@@ -12,6 +12,12 @@ order: 2
 
 * [Registration](https://www.wjx.top/vm/tbXtzkR.aspx# ) 
 
+请点击以下链接或扫描二维码报名
+
+组委会将根据报名信息通知培训时间
+
+https://www.wjx.top/vm/mBrTh1g.aspx
+
 <p align="middle">
     <img src="{% link media/CCC2024_qrcode.jpg %}" width="300" class="center">
 </p>
