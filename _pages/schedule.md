@@ -7,14 +7,18 @@ sidebar: true
 icon: fa fa-calendar
 order: 1
 ---
-5月10日 发布
+5月17日 竞赛发布
 
-5月16-30日 培训
+5月27-31日 培训
 
-6月 15日 第一次提交
+6月17日 第一次提交
 
-6月28日 第二次提交
+6月30日 第二次提交
 
-7月3日 公布决赛名单 
+7月5日 公布决赛名单 
 
 7月19日 CCFChip现场决赛答辩与颁奖
+
+<p align="middle">
+    <img src="{% link media/CCC_2023_flow.png %}" width="800" class="center">
+</p>
