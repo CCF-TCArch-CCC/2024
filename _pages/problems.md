@@ -29,7 +29,7 @@ order: 4
 
 
 ## **初赛题目**
-本次比赛，主要基于PowerInfer的开源项目，要求参赛队在熟悉Llama2-7B/13B的优化方法基础上，利用开源的ROCm开源堆栈和HIP编程模型在Radeon 7900XTX GPU上对13B模型：**[Prosparse-13B](https://huggingface.co/PowerInfer/prosparse-llama-2-13b-gguf)** 展开优化，方法不限(例如算子优化、混合精度量化等)。
+本次比赛，可参考PowerInfer的开源项目，要求参赛队在熟悉Llama2-7B/13B的优化方法基础上，利用开源的ROCm开源堆栈和HIP编程模型在Radeon 7900XTX GPU上对13B模型：**[Prosparse-13B](https://huggingface.co/PowerInfer/prosparse-llama-2-13b-gguf)** 展开优化，方法不限(例如算子优化、混合精度量化等)。参赛队伍也可以开发自己的推理框架在7900XTX 上部署。
 
 <p align="middle">
     <img src="{% link media/p3.png %}" width="700" class="center">
