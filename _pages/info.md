@@ -39,7 +39,7 @@ $$Runtime = 70\% * ({Decode \over 2*Decode_{best}} + {Prefill \over 2*Prefill_{b
 
 本赛题使用困惑度(PPL)作为模型精度的评估指标，以模型在给定语料困惑度$P_{best}$ 为基准，模型精度评估分数计算如下：
 
-$$PPL = 30\% * ({P - P_{best} \over P_{best}})$$
+$$PPL = 30\% * ({P_{best} \over P})$$
 
 综合两者评分即为总分:
 
