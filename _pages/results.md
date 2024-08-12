@@ -20,10 +20,6 @@ order: 6
 
 ## Finals on-site
 
-第一名合影
-
-<img src="../media/champion.jpg" alt="Champion" width="600" />
-
 竞赛作品分享展台
 
 <img src="../media/booth.jpg" alt="Champion" width="600" />
