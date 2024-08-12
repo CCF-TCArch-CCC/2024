@@ -18,11 +18,18 @@ order: 6
 | 6    | 西南交通大学(SWJTU)                   | 明刚          | 刘宸诚 | 李嘉煜 | 朱宗海    | 陈香伊    |
 
 
-| Rank | School                                                              | Member 1 (Captain) | Member 2      | Member 3   | Advisor 1   | Advisor 2    |
-| ---- | ------------------------------------------------------------------- | ------------------ | ------------- | ---------- | ----------- | ------------ |
-| 1    | University of Shanghai for Science and Technology (USST)            | Zhang Jian         | Peng Yuang    | Qiu Xinyun | Pei Songwen |              |
-| 2    | Southwest Jiaotong University (SWJTU)                               | Li Xusheng         | Chen Jiahui   | Feng Yurui | Feng Li     | Xing Huanlai |
-| 3    | Fudan University (FDU)                                              | Bai Bizhe          | Cao Jianjian  | Gao Lei    | Chen Tao    |              |
-| 4    | University of Chinese Academy of Sciences/Zhijiang Lab (UCAS/ZJlab) | Xu Haoran          | Du Jianhua    | Liu Wenbo  | Zhang Ruyun |              |
-| 5    | Beijing Institute of Technology (BIT)                               | Wu Lingjie         | Wang Zhengtao | Liu Yiqi   | Zhang Wenbo |              |
-| 6    | Southwest Jiaotong University (SWJTU)                               | Ming Gang          | Liu Chencheng | Li Jiayu   | Zhu Zonghai | Chen Xiangyi |
+## Finals on-site
+
+第一名合影
+
+<img src="../media/champion.jpg" alt="Champion" width="600" />
+
+竞赛作品分享展台
+
+<img src="../media/booth.jpg" alt="Champion" width="600" />
+
+颁奖现场
+
+<img src="../media/finals-onsite.jpg" alt="Champion" width="600" />
+
+
